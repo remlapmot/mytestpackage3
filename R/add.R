@@ -4,7 +4,6 @@
 #' @param b Number
 #' @export
 #' @examples
-#' #| dev: 'png'
 #' par(mar = c(5, 5, 5, 5), cex.lab = 1.3)
 #' plot(1:10, xlab = expression(hat(beta)), ylab = expression(hat(beta)))
 add <- function(a, b) {
