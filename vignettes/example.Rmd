@@ -88,3 +88,23 @@ Another example plot, specifying dev CairoPNG.
 par(mar = c(5, 5, 5, 5), cex.lab = 1.3)
 plot(1:10, xlab = expression(hat(beta)), ylab = expression(hat(beta)))
 ```
+
+Another plot specifying dev png.
+
+```{r, fig.alt="Plot 1 again", dev='png'}
+# Need fewer, taller rows and fewer, wider columns for big operators ...
+nr <- 10
+nc <- 1
+make.table(nr, nc)
+i <- 0
+draw.title.cell("Big Operators", i, nr); i <- i + 1
+draw.plotmath.cell(expression(sum(x[i], i=1, n)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(prod(plain(P)(X == x), x)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(integral(f(x) * dx, a, b)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(union(A[i], i==1, n)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(intersect(A[i], i==1, n)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(lim(f(x), x %->% 0)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(min(g(x), x >= 0)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(inf(S)), i, nr); i <- i + 1
+draw.plotmath.cell(expression(sup(S)), i, nr); i <- i + 1
+```
